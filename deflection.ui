@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>deflection</class>
- <widget class="QWidget" name="deflection">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -32,7 +32,24 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(4, 33, 39);</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>20</y>
+     <width>651</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(226, 226, 0);
+font: 75 18pt &quot;Consolas&quot;;</string>
+   </property>
+   <property name="text">
+    <string>FRAME ANALYSIS USING STIFFNESS MATRIX METHOD</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
      <x>390</x>
@@ -517,23 +534,6 @@ color: rgb(255, 255, 255);</string>
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>20</y>
-     <width>651</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(226, 226, 0);
-font: 75 18pt &quot;Consolas&quot;;</string>
-   </property>
-   <property name="text">
-    <string>FRAME ANALYSIS USING STIFFNESS MATRIX METHOD</string>
-   </property>
   </widget>
  </widget>
  <resources/>
