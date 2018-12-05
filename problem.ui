@@ -614,7 +614,7 @@ color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="3">
+    <item row="2" column="4">
      <widget class="QLabel" name="label_41">
       <property name="font">
        <font>
@@ -646,19 +646,6 @@ color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="2">
-     <widget class="QLineEdit" name="M">
-      <property name="cursor">
-       <cursorShape>WaitCursor</cursorShape>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 85, 255);</string>
-      </property>
-      <property name="dragEnabled">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </item>
     <item row="1" column="1">
      <widget class="QLabel" name="label_40">
       <property name="font">
@@ -675,7 +662,7 @@ color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="2">
+    <item row="0" column="3">
      <widget class="QLineEdit" name="w">
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 85, 255);</string>
@@ -701,7 +688,7 @@ color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="3">
+    <item row="0" column="4">
      <widget class="QLabel" name="label_92">
       <property name="font">
        <font>
@@ -718,6 +705,13 @@ color: rgb(255, 255, 255);</string>
      </widget>
     </item>
     <item row="1" column="3">
+     <widget class="QLineEdit" name="P">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
      <widget class="QLabel" name="label_99">
       <property name="font">
        <font>
@@ -730,13 +724,6 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;kN/m&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="2">
-     <widget class="QLineEdit" name="P">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 85, 255);</string>
       </property>
      </widget>
     </item>
@@ -759,6 +746,9 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; vertical-align:sub;&quot;&gt;w&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLineEdit" name="lineEdit"/>
     </item>
    </layout>
   </widget>
