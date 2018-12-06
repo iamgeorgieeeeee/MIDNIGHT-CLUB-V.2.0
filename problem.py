@@ -58,14 +58,22 @@ class ProblemWindow(QtGui.QMainWindow, Ui_MainWindow):
                 ss = self.compute(float(E), float(I), float(A), float(x1)*1000, float(x2)*1000, float(x3)*1000, float(y1)*1000, float(y2)*1000, float(P), float(w), float(M))
                 print("after computation")
                 n = 3
+                print("after n=3")
                 m = 0
+                print("after m=0")
                 for i in ss:
+                    print("entered in for loop")
                     if (round(ss.item(m), n) == -0.0):
+                        print("if -0 checker")
                         ss[m] = 0.0
+                        print("after ss")
                         m +=1
+                        print("after m increment in if")
                     else:
+                        print("entered in else")
                         m +=1
-
+                        print(" after m increment in else")
+                print("print output text fields")
                 self.x1_2.setText(str(x1))
                 self.x2_2.setText(str(x2))
                 self.x3_2.setText(str(x3))
@@ -75,13 +83,14 @@ class ProblemWindow(QtGui.QMainWindow, Ui_MainWindow):
                 self.w_2.setText(str(w))
                 self.P_2.setText(str(P))
 
-
+                print("print deflections")
                 self.d1.setText(str(round(ss.item(0), n)))
                 self.d2.setText(str(round(ss.item(1), n)))
                 self.d3.setText(str(round(ss.item(2), n)))
                 self.d4.setText(str(round(ss.item(3), n)))
                 self.d5.setText(str(round(ss.item(4), n)))
                 self.d6.setText(str(round(ss.item(5), n)))
+                print("print reactions")
                 self.p1.setText(str(round(ss.item(6), n)))
                 self.p2.setText(str(round(ss.item(7), n)))
                 self.p3.setText(str(round(ss.item(8), n)))
@@ -103,7 +112,7 @@ class ProblemWindow(QtGui.QMainWindow, Ui_MainWindow):
 
         
     def compute(self, E, I, A, x1, x2, x3, y1, y2, P, W, M):
-        print("entered compute")
+        #print("entered compute")
     	Xb = [0, x1, x1+x2]
         Xe = [ x1, x1+x2, x1+x2+x3]
         Yb = [0, y1, y1]
@@ -140,11 +149,11 @@ class ProblemWindow(QtGui.QMainWindow, Ui_MainWindow):
             return k
             
         k1 = computeK(0)
-        print(k1)
+        #print(k1)
         k2 = computeK(1)
-        print(k2)
+        #print(k2)
         k3 = computeK(2)
-        print(k3)
+        #print(k3)
         print("s i calculated here")
         s = np.matrix([[k1.item(21)+k2.item(0), k1.item(22)+k2.item(1), k1.item(23)+k2.item(2), k2.item(3), k2.item(4), k2.item(5)],
                        [k1.item(27)+k2.item(6), k1.item(28)+k2.item(7), k1.item(29)+k2.item(8), k2.item(9), k2.item(10), k2.item(11)],
@@ -157,34 +166,82 @@ class ProblemWindow(QtGui.QMainWindow, Ui_MainWindow):
         t = np.array(s.I)
         print(t)
         print("q will be calculated here")
-        q1 = [0, (w[0]*L[0]/2), (w[0]*(L[0]**2)/12), 0, (w[0]*L[0]/2), -(w[0]*(L[0]**2)/12)]
-        print(q1)
-        q2 = [0, 3*w[1]*L[1]/20, w[1]*(L[1]**2)/30, 0, 7*w[1]*L[1]/20, -(w[1]*(L[1]**2)/20)]
-        print(q2)
-        q3 = [w[2]*1000/2, 0, w[2]*L[2]*1000/8, w[2]*1000/2, 0, -(w[2]*L[2]*1000/8)]
-        print(q3)
-        qf = np.array([-sinTheta[0]*q1[1], (cosTheta[0]*q1[1])+q2[1], q1[5]+q2[2], q3[0], q2[4], q2[5]+q3[2]])
-        q = np.array([0, 0, 0, 0, 0, 0])
+        q1 = [0, (w[0]/2), (w[0]*L[0]/8000), 0, (w[0]/2), -(w[0]*L[0]/8000)] 
+        #print(q1)
+        q2 = [0, 7*w[1]*L[1]/20000, w[1]*(L[1]**2)/(20*10**6), 0, 3*w[1]*L[1]/20000, -(w[1]*(L[1]**2)/(30*10**6))]
+        #print(q2)
+        q3 = [0, 0, 0, 0, 0, 0]         
+        #print(q3)
+        q1g = np.array([-sinTheta[0]*q1[1], (cosTheta[0]*q1[1]), q1[2], -sinTheta[0]*q1[1], (cosTheta[0]*q1[1]), q1[5]])
+        
+        q = np.array([0, 0, 0, 0, 0, -w[2]])
+        #print(q)
+        qf= np.array([q1g[3]+q2[0], q1g[4]+q2[1], q1g[5]+q2[2], q2[3]+q3[0], q2[4]+q3[1], (q2[5]+q3[2]) ])
+        #print(qf)
         qqf = np.array(q-qf)
+        #print(qqf)
+        qqf2 = np.array([ [1000*qqf[0]], [1000*qqf[1]], [1000000*qqf[2]], [1000*qqf[3]], [1000*qqf[4]], [1000000*qqf[5]] ])
+        print("qqf2 is printed")
+        print(qqf2)
         print("deflection will be calculated here")
-        d = np.dot(t, qqf)
-        d1 = np.array([0, 0, 0, d[0], d[1], d[2]])
+        d = np.dot(t, qqf2)
+        print("d is printed")
+        print(d)
+        d1 = np.array([[0], [0], [0], [d[0]], [d[1]], [d[2]]])
+        print("d1 is printed")
+        print(d1)
         d2 = d
-        d3 = np.array([d[3], d[4], d[5], 0, 0, 0])
+        d3 = np.array([[d.item(3)], [d.item(4)], [d.item(5)], [0], [0], [0]])
+        print("d3 is printed")
+        print(d3)
         print("f will be calculated here")
         f1 = np.dot(k1, d1)
+
         f2 = np.dot(k2, d2)
         f3 = np.dot(k3, d3)
+        print("transform q1g into 6 x1 array")
+        q1gg = np.array([ [1000*q1g[0] ], [1000*q1g[1]], [1000000*q1g[2]], [1000*q1g[3]], [1000*q1g[4]], [1000000*q1g[5]]])
+        print(q1gg)
+        print("transform q2 into 6 x1 array")
+        q22 = np.array([ [1000*q2[0]], [1000*q2[1]], [1000000*q2[2]], [1000*q2[3]], [1000*q2[4]], [1000000*q2[5]]])
+        print(q22)
+        print("transform q3 into 6 x1 array")
+        q33 = np.array([ [1000*q3[0]], [1000*q3[1]], [1000000*q3[2]], [1000*q3[3]], [1000*q3[4]], [1000000*q3[5]]])
+        print(q33)
+        print("print f1")
+        print(f1)
+        print("print q1g")
+        print(q1gg)
+
+        print("print f2")
+        print(f2)
+        print("print q2")
+        print(q22)
+
+        print("print f3")
+        print(f3)
+        print("print q3")
+        print(q33)
+
+
+        Q1 = np.array(f1+q1gg)
+        Q2 = np.array(f2+q22 )
+        Q3 = np.array(f3+q33 )
+
+        print("Q1 print")
+        print(Q1)
+        print("Q2 print")
+        print(Q2)
+        print("Q3 print")
+        print(Q3)
 
         tm1 = [-sinTheta[0]*q1[1], cosTheta[0]*q1[1], q1[2], -sinTheta[0]*q1[1], cosTheta[0]*q1[1], q1[5]]
         tm2 = q2
         tm3 = q3
         print("reactions will be calculated here")
-        reactions = np.array([(f1.item(3)+f2.item(0)+qf.item(0))/1000, (f1.item(4)+f2.item(1)+qf.item(1))/1000, (f1.item(5)+f2.item(2)+qf.item(2))/1000000, 
-                            (f2.item(3)+f3.item(0)+qf.item(3))/1000, (f2.item(4)+f3.item(1)+qf.item(4))/1000, (f2.item(5)+f3.item(2)+qf.item(5))/1000000, 
-                            (f1.item(0)+tm1[0])/1000, (f1.item(1)+tm1[1])/1000, (f1.item(2)+tm1[2])/1000000,
-                            (f3.item(3)+tm3[3])/1000, (f3.item(4)+tm3[4])/1000, (f3.item(5)+tm3[5])/1000000])
+        reactions= np.array([ (Q1.item(3)+Q2.item(0))/1000, (Q1.item(4)+Q2.item(1))/1000, (Q1.item(5)+Q2.item(2))/1000, (Q2.item(3)+Q3.item(0))/1000, (Q2.item(4)+Q3.item(1))/1000, (Q2.item(5)+Q3.item(2))/1000000, Q1.item(0)/1000, Q1.item(1)/1000, Q1.item(2)/1000000, Q3.item(3)/1000, Q3.item(4)/1000, Q3.item(5)/1000000 ])
 
+        
         answer = np.append(d, reactions)
         print("answer is returned")
         return answer
