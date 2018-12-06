@@ -909,6 +909,9 @@ color: rgb(255, 255, 255);</string>
         <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -1081,6 +1084,9 @@ color: rgb(255, 255, 255);</string>
         <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -1099,6 +1105,9 @@ color: rgb(255, 255, 255);</string>
         <italic>false</italic>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1119,6 +1128,9 @@ color: rgb(255, 255, 255);</string>
         <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -1138,6 +1150,9 @@ color: rgb(255, 255, 255);</string>
         <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -1156,6 +1171,9 @@ color: rgb(255, 255, 255);</string>
         <italic>false</italic>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1195,6 +1213,9 @@ color: rgb(255, 255, 255);</string>
         <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -1213,6 +1234,9 @@ color: rgb(255, 255, 255);</string>
         <italic>false</italic>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1641,6 +1665,9 @@ color: rgb(255, 255, 255);</string>
         <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -1676,6 +1703,9 @@ color: rgb(255, 255, 255);</string>
         <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -1694,6 +1724,9 @@ color: rgb(255, 255, 255);</string>
         <italic>false</italic>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1729,6 +1762,9 @@ color: rgb(255, 255, 255);</string>
         <italic>false</italic>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1807,6 +1843,9 @@ color: rgb(255, 255, 255);</string>
         <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -1826,6 +1865,9 @@ color: rgb(255, 255, 255);</string>
         <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -1844,6 +1886,9 @@ color: rgb(255, 255, 255);</string>
         <italic>false</italic>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1992,6 +2037,9 @@ color: rgb(255, 255, 255);</string>
         <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
+      </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
@@ -2026,6 +2074,9 @@ color: rgb(255, 255, 255);</string>
         <italic>false</italic>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2173,6 +2224,9 @@ color: rgb(255, 255, 255);</string>
         <italic>false</italic>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 85, 255);</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

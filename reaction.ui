@@ -77,6 +77,9 @@ font: 75 18pt &quot;Consolas&quot;;</string>
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 85, 255);</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_2">
    <property name="geometry">
@@ -86,6 +89,9 @@ font: 75 18pt &quot;Consolas&quot;;</string>
      <width>51</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 85, 255);</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_3">
@@ -97,6 +103,9 @@ font: 75 18pt &quot;Consolas&quot;;</string>
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 85, 255);</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_4">
    <property name="geometry">
@@ -106,6 +115,9 @@ font: 75 18pt &quot;Consolas&quot;;</string>
      <width>51</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 85, 255);</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_5">
@@ -117,6 +129,9 @@ font: 75 18pt &quot;Consolas&quot;;</string>
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 85, 255);</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_6">
    <property name="geometry">
@@ -126,6 +141,9 @@ font: 75 18pt &quot;Consolas&quot;;</string>
      <width>51</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 85, 255);</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_7">
@@ -137,6 +155,9 @@ font: 75 18pt &quot;Consolas&quot;;</string>
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 85, 255);</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_8">
    <property name="geometry">
@@ -147,6 +168,9 @@ font: 75 18pt &quot;Consolas&quot;;</string>
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 85, 255);</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_9">
    <property name="geometry">
@@ -156,6 +180,27 @@ font: 75 18pt &quot;Consolas&quot;;</string>
      <width>51</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 85, 255);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>530</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(226, 226, 0);
+color: rgb(0, 0, 0);
+font: 11pt &quot;Consolas&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>
